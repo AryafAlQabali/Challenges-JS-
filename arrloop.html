@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <div>
+            <h1>Find Student</h1>
+            <input type="text" id="student-input">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="school" style="font-size: 20px;"> </div>
+        <h2 id="result"></h2>
+    </div>
+</body>
+
+
+<script>
+            var school = ['John', 'Ron', 'James', 'Jack', 'Chris'];
+
+            for(var memberIndex = 0 ; memberIndex <= school.length - 1 ; memberIndex++ ){
+            document.getElementById("school").innerHTML += school[memberIndex] + " -- "
+            
+            } 
+            document.getElementById("search-btn").addEventListener("click", function(){
+            var name = document.getElementById("student-input").value.toLowerCase()
+            var found = false
+
+        //   console.log("test")
+
+
+        
+
+
+            // for(var nameStudent of school){
+            // var loweredStudent = nameStudent.toLowerCase()
+            // if(name == loweredStudent){
+       
+            //     document.getElementById("result").innerHTML = `${name} is in the school`
+            //     break
+                 
+            // }  
+            // document.getElementById("result").innerHTML = `${name} is in NOT the school`
+ 
+            
+            //  }
+
+
+            for(var nameStudent of school){
+            var loweredStudent = nameStudent.toLowerCase()
+            document.getElementById("result").innerHTML = `${name} is in NOT the school`
+
+            if(name != loweredStudent){
+                continue
+            }  
+            document.getElementById("result").innerHTML = `${name} is in the school`
+            break
+            
+             }
+            
+
+        
+            // if(name == loweredStudent){
+            //     found = true
+                
+            //         // console.log('The required element found')
+            // }   
+            
+            //  }
+            // if(found == true){
+            //     document.getElementById("result").innerHTML = `${name} is in the school`
+
+            // }else{
+            //     document.getElementById("result").innerHTML = `${name} is in NOT the school`
+
+            // }
+        
+                })
+       
+
+
+ 
+</script>
+</html>

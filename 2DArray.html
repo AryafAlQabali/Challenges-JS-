@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2DArrays</title>
+</head>
+<body>
+    <!-- <div id="student">
+
+    </div> -->
+    <div id="Multiplication" style="text-align: center;"> 
+
+
+    </div>
+    
+</body>
+
+<script>
+// var students = [
+//         ["aryaf","aqeel","alqabali"],
+//         ["gg","tt","rr"],
+//         ["hadeel", "sbahan", "alsabhan"]
+//     ]
+
+// for(i = 0; i < students.length; i++){
+// document.getElementById("student").innerHTML += "class" + (i+1) + "<br>" + students[i] + "<br>"
+// }
+
+
+
+for (var i = 1; i <= 10; i++){
+    document.getElementById("Multiplication").innerHTML +=  "<br>" + `<h1> Multiplication Table Of ${i} </h1> ` + "<br>" 
+
+
+    for(var j = 1; j <= 10; j++){
+        document.getElementById("Multiplication").innerHTML += `${i} X ${j} = ${i*j} <br>`
+        }
+        document.getElementById("Multiplication").innerHTML += "<hr>"
+    }
+
+</script>
+</html>

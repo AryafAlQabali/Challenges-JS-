@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="loop" style="text-align: center;"">
+    </div> -->
+
+
+    <div style="text-align: center; margin-top: 100px;">
+    <h1 >Vowel Letters: (A,E,I,O,U)</h1>
+
+    <input type="text" id="letters-input">
+    <button id="add-letters">Submit</button>
+
+   <h2 id="result"></h2>
+
+</div>
+</body>
+<script>
+    // for(var i = 0; i<=1000; i++){
+    //         console.log(i)
+    // }
+
+    // document.getElementById("loop").innerHTML = i
+   
+     
+// for (var i = 0; i <= 500 ; i++) { 
+//     if(i % 2 == 0){
+//  console.log(i)
+//     }
+   
+// }
+
+
+    // for (var i = 0; i <= 30; ++i){
+    //     document.getElementById("loop").innerHTML += `10 X ${i} = ${i*10} <br>`
+
+    // }
+        
+document.getElementById("add-letters").addEventListener('click', function(){
+    // console.log("add")
+    
+    document.getElementById("result").innerHTML = ``
+
+var text = document.getElementById("letters-input").value
+
+// console.log(lettersName)
+vowel = ['a', 'e', 'i', 'o', 'u' ,'A', 'E', 'I', 'O', 'U']
+
+for (var char of text) {
+    if (!vowel.includes(char)){
+document.getElementById("result").innerHTML += `${char}<br>`
+
+    }
+
+}
+
+document.getElementById('letters-input').value = "";
+
+
+})
+
+
+
+    
+</script>
+</html>

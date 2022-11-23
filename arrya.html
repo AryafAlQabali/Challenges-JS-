@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrya</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+    <input type="text" id="student-input" >
+    <button id="add-student-btn"  > submit</button>
+    <button id="delete-student-btn">Delete</button>
+    <div id="student" style="font-size: 30px;"></div>
+
+    
+</div>
+</body>
+<script>
+var student = []
+
+
+document.getElementById("add-student-btn").addEventListener("click" , function(){
+    // console.log("add")
+var studentName = document.getElementById("student-input").value
+// console.log(studentName)
+student.push(studentName)
+
+
+document.getElementById("student").innerHTML = student
+
+document.getElementById('student-input').value = "";
+
+
+
+
+})
+document.getElementById("delete-student-btn").addEventListener("click", function(){
+    // console.log("delete")
+    student.pop()
+    document.getElementById("student").innerHTML = student
+
+
+})
+
+</script>
+</html>
